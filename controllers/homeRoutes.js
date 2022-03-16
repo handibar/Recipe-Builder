@@ -1,4 +1,3 @@
-/* eslint-disable new-cap */
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
@@ -19,9 +18,9 @@ router.get('/', async (req, res) => {
     const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
-      projects,
-      loggedIn: req.session.logged_in,
+    res.render('homepage', { 
+      projects, 
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     res.status(500).json(err);
@@ -43,7 +42,7 @@ router.get('/project/:id', async (req, res) => {
 
     res.render('project', {
       ...project,
-      loggedIn: req.session.logged_in,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -63,7 +62,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      loggedIn: true,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
