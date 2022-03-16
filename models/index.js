@@ -1,13 +1,26 @@
+// import models
+const Recipe = require('./Recipe');
+const Ingredient = require('./Ingredient');
+const IngredientRecipe = require('./IngredientRecipe');
 const User = require('./User');
-const Project = require('./Project');
 
-User.hasMany(Project, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+// ingredient belongsTo recipe
+Ingredient.belongsTo(Recipe, { 
+foreignKey: "recipe_id",
+
 });
+// recipe has many ingredients
+Recipe.hasMany(Ingredient, {
+  foreignKey: "ingredient_id"
+})
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+// Products belongToMany Tags (through ProductTag)
 
-module.exports = { User, Project };
+// Tags belongToMany Products (through ProductTag)
+
+module.exports = {
+  Recipe,
+  Ingredient,
+  IngredientRecipe,
+  User,
+};
