@@ -1,12 +1,22 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
+  var array = [];
+  var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    array.push(checkboxes[i].value);
+  }
+  console.log(array);
   const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
+  const needed_funding = document
+    .querySelector('#project-funding')
+    .value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
   if (name && needed_funding && description) {
     const response = await fetch(`/api/projects`, {
+      //get
       method: 'POST',
       body: JSON.stringify({ name, needed_funding, description }),
       headers: {
@@ -41,7 +51,3 @@ const delButtonHandler = async (event) => {
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
