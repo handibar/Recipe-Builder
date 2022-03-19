@@ -6,13 +6,19 @@ VALUES ("Shrimp Scampi", "Quick and tasty shrimp and pasta, finished with lemon 
        ("Turkey Pad Thai", "A healthy take on pad thai. Loaded with fresh veggies and finished with a tasty peanut sauce, this is a great week night meal.", 4), 
        ("Garlic Butter Baked Salmon", "Spruce up your salmon with a garlic butter marinade.", 1),
        ("Chipotle Chicken Skewers", "A new take on enchiladas, these spicy, cheesy enchiladas make a great weeknight meal.".00, 5),
-       ("Hamburger", 97000.00, 2),
-       ("Potato Wedges", 102000.00, 1),
-       ("Zuppa Toscana", 72000.00, 4), 
-        ("Pasta Salad", "Quick and tasty shrimp and pasta, finished with lemon and red pepper flakes.", 1),
-       ("Cool Summer Soba Noodle Salad", "A new take on enchiladas, these spicy, cheesy enchiladas make a great weeknight meal.".00, 5),
-       ("Parmesan Bread Twist", 97000.00, 2),
-       ("Chipotle Stout Chili", 102000.00, 1);
+       ("Hamburger", "An American classic. This hamburger recipe gives you a quick and easy take on a classic.", 2),
+       ("Potato Wedges", "Crispy, seasoned potatoes for a vegetarian, one pan meal.", 1),
+       ("Zuppa Toscana", "A rich, classic Italian soup.", 4), 
+        ("Pasta Salad", "A summertime classic, this pasta salad is loaded with veggies and finished with a creamy dressing.", 1),
+       ("Cool Summer Soba Noodle Salad", ".".00, 5),
+       ("Parmesan Bread Twist", "Short on ingredients, but big on flavor. These pizza joint inpired twists are a crowd favorite", 2),
+       ("Chipotle Stout Chili", "A hearty, wintertime meal, this chili is loaded with meat and veggies and is sure to please everyone.", 1). 
+       ("Chicken Marsala",                      ),
+       ("Chili Glazed Salmon",                  ),
+       ("Baked Ranch Chicken",                  ),
+       ("Baked Shrimp"), 
+       ("Cheeseburger Stuffed Bell Pepper", ),
+       ("Baked Mac & Cheese", "A grown up version of a childhood classic, this cheesy pasta is finished in the oven for a crispy upgrade.");
        
 
 
@@ -63,6 +69,12 @@ VALUES ("Shrimp"),
        ("Mozerella Cheese"), 
        ("Mushrooms"), 
        ("Bread Crumbs"), 
-       ("Ranch Mix");
+       ("Ranch Mix"),
+       ("Sour Cream");
        
+
+
+INSERT INTO recipes_ingredients (recipe_id, ingredient_id)
+VALUES (),
+(),
 
