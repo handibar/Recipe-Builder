@@ -1,19 +1,21 @@
-<!-- Loop over each object in the projects array -->
-{{#each ingredient as |ingredient|}}
-  <div class='row mb-4 project'>
+<form class='form new-project-form'>
+  {{#each ingredient as |ingredient|}}
+    <div class='row mb-4 project'>
 
-    {{ingredient.name}}
-
+      <div>
+        <input
+          type='checkbox'
+          value='{{ingredient.id}}'
+          name='{{ingredient.name}}'
+        />
+        {{ingredient.name}}</div>
+      {{#each ingredient.recipes as |recipe|}}
+        {{recipe.name}}
+      {{/each}}
+    </div>
+  {{/each}}
+  <div class='form-group'>
+    <button type='submit' class='btn btn-primary'>Create</button>
   </div>
-{{/each}}
-
-{{!-- <!-- Loop over each object in the projects array -->
-{{#each recipes as |recipe|}}
-  <div class='row mb-4 project'>
-
-    {{recipe.name}}
-    {{#each recipe.ingredients as |ing|}}
-      <div>{{ing.name}}</div>
-    {{/each}}
-  </div>
-{{/each}} --}}
+</form>
+<script src='./js/homepage.js'></script>
