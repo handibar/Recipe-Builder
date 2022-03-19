@@ -3,6 +3,7 @@ const { parse } = require('dotenv');
 const { json } = require('express/lib/response');
 const { Recipe, Ingredient, IngredientRecipe } = require('../../models');
 const { findAll } = require('../../models/Recipe');
+const Op = require('sequelize').Op;
 // const withAuth = require('../../utils/auth');
 
 router.get('/recipe', async (req, res) => {
@@ -15,7 +16,8 @@ router.post('/', async (req, res) => {
 
   try {
     const ingredientData = await IngredientRecipe.findAll({
-      where: { ingredient_id: ingredients },
+      // added OR function, which is giving us all recipes with any ingredients.  WE SHOULD BE ABLE TO DO AN AND FUNCTION SOMEHOW TO MAKE IT REQUIRE ALL INGREDIENTS
+      where: { ingredient_id: { [Op.or]: ingredients } },
     });
 
     if (!ingredientData) {
