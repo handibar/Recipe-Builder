@@ -9,11 +9,6 @@ router.get('/recipe', async (req, res) => {
   res.render();
 });
 
-//router.get
-//pass in req.body
-//convert req.body into separated list of numbers
-//return recipe data back (res.json)
-
 // post route for selected ingredients
 router.post('/', async (req, res) => {
   const ingredients = req.body.ingredients.map(Number);
@@ -22,10 +17,6 @@ router.post('/', async (req, res) => {
     const ingredientData = await IngredientRecipe.findAll({
       where: { ingredient_id: ingredients },
     });
-    // if (!projectData) {
-    //   res.status(404).json({ message: 'No project found with this id!' });
-    //   return;
-    // }
 
     if (!ingredientData) {
       res.status(404).json({ message: 'no recipes' });
