@@ -1,31 +1,40 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { parse } = require('dotenv');
+const { json } = require('express/lib/response');
+const { Recipe, Ingredient, IngredientRecipe } = require('../../models');
+const { findAll } = require('../../models/Recipe');
 // const withAuth = require('../../utils/auth');
+
+router.get('/recipe', async (req, res) => {
+  res.render();
+});
 
 //router.get
 //pass in req.body
 //convert req.body into separated list of numbers
 //return recipe data back (res.json)
 
-//utilize this template for get route
-// router.get('/', async (req, res) => {
-//   try {
-//     const projectData = await Project.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
+// post route for selected ingredients
+router.post('/', async (req, res) => {
+  const ingredients = req.body.ingredients.map(Number);
 
-//     if (!projectData) {
-//       res.status(404).json({ message: 'No project found with this id!' });
-//       return;
-//     }
+  try {
+    const ingredientData = await IngredientRecipe.findAll({
+      where: { ingredient_id: ingredients },
+    });
+    // if (!projectData) {
+    //   res.status(404).json({ message: 'No project found with this id!' });
+    //   return;
+    // }
 
-//     res.status(200).json(projectData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    if (!ingredientData) {
+      res.status(404).json({ message: 'no recipes' });
+    }
+    res.status(200).json(ingredientData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
