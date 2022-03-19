@@ -4,14 +4,44 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const ingredientData = await Ingredient.findAll({});
+    // Get all projects and JOIN with user data
+    const recipeData = await Recipe.findAll({
+      include: [
+        {
+          model: Ingredient,
+          through: IngredientRecipe,
+        },
+      ],
+    });
 
-    const ingredient = ingredientData.map((ingredient) =>
-      ingredient.get({ plain: true })
-    );
-    console.log(ingredient);
+    // Serialize data so the template can read it
+    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+    console.log(recipes);
+    // Pass serialized data and session flag into template
     res.render('homepage', {
-      ingredient,
+      recipes,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/project/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+
+    res.render('project', {
+      ...project,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
