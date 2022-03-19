@@ -1,78 +1,36 @@
 const router = require('express').Router();
 const { Ingredient, Recipe, IngredientRecipe, User } = require('../models');
 const withAuth = require('../utils/auth');
-
-// router.get('/', async (req, res) => {
-//   try {
-//     const ingredientData = await Ingredient.findAll({});
-
-//     const ingredient = ingredientData.map((ingredient) =>
-//       ingredient.get({ plain: true })
-//     );
-//     console.log(ingredient);
-//     res.render('homepage', {
-//       ingredient,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
+// show all ingredients on the homepage
 router.get('/', async (req, res) => {
   try {
-    const ingredientData = await Ingredient.findAll({
-      where: {
-        id: [1, 2],
-      },
-      include: [
-        {
-          model: Recipe,
+    const ingredientData = await Ingredient.findAll({});
 
-          through: IngredientRecipe,
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    console.log(recipes);
-    // Pass serialized data and session flag into template
+    const ingredient = ingredientData.map((ingredient) =>
+      ingredient.get({ plain: true })
+    );
+    // console.log(ingredient);
     res.render('homepage', {
-      recipes,
+      ingredient,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-router.get('/project/:id', async (req, res) => {
-  try {
-    const projectData = await Project.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
+// display recipes after user clicks checkboxes
 router.get('/recipes', async (req, res) => {
+  const ids = req.query.ids.split(',');
+  console.log('here are the ids' + ids);
+  let whereClause = {};
+  if (ids.length) {
+    whereClause = { id: ids };
+    console.log('HELLO AGAIN' + whereClause.id);
+  }
   try {
-    // Get all projects and JOIN with user data
+    // Get all recipes
     const recipeData = await Recipe.findAll({
+      where: whereClause,
       include: [
         {
           model: Ingredient,
@@ -83,7 +41,7 @@ router.get('/recipes', async (req, res) => {
 
     // Serialize data so the template can read it
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    console.log(recipes);
+    console.log('this is it' + recipes);
     // Pass serialized data and session flag into template
     res.render('recipes', {
       recipes,

@@ -1,0 +1,33 @@
+const newFormHandler = async (event) => {
+  var ingredients = [];
+  var checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+  event.preventDefault();
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    ingredients.push(checkboxes[i].value);
+  }
+  const response = await fetch('/api/recipes', {
+    method: 'POST',
+    body: JSON.stringify({ ingredients }),
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    // this is an array of recipes that we will use javascript to put back onto the page
+    const data = await response.json();
+    const recipeIDs = data.map((recipe) => recipe.recipe_id);
+
+    console.log(data);
+    console.log(recipeIDs);
+    // calls the homeroute for recipes
+    window.location.replace(`recipes?ids=${recipeIDs}`);
+    // submit hidden form with the id's that have been selected
+    // when they hit create it will submit another form that goes to the recipe page with the ID's in it
+  } else {
+    alert(response.statusText);
+  }
+};
+
+document
+  .querySelector('.new-project-form')
+  .addEventListener('submit', newFormHandler);
