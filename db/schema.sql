@@ -12,7 +12,8 @@ create table recipes (
     
     create table ingredients (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name varchar (30) not null
+    name varchar (30) not null,
+    type_id INT NOT NULL
     );
     
     

@@ -15,19 +15,19 @@ Ingredient.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+    type_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
- 
-    {
+
+  {
     sequelize,
     timestamps: false,
-    
+
     underscored: true,
     modelName: 'ingredient',
   }
-
 );
-
-
 
 module.exports = Ingredient;
