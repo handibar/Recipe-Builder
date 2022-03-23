@@ -85,5 +85,5 @@ const ingredientRecipeData = [
 
 const seedIngredientRecipes = () =>
   IngredientRecipe.bulkCreate(ingredientRecipeData);
-
+seedIngredientRecipes();
 module.exports = seedIngredientRecipes;
