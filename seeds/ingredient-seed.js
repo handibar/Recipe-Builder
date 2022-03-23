@@ -35,9 +35,6 @@ const ingredientData = [
     name: 'Rice',
   },
   {
-    name: 'Bacon',
-  },
-  {
     name: 'Pasta',
   },
   {
@@ -86,9 +83,6 @@ const ingredientData = [
     name: 'Chicken Broth',
   },
   {
-    name: 'Cucumber',
-  },
-  {
     name: 'Lemon',
   },
   {
@@ -118,9 +112,7 @@ const ingredientData = [
   {
     name: 'Stout Beer',
   },
-  {
-    name: 'Mustard',
-  },
+
   {
     name: 'Heavy Cream',
   },
@@ -150,6 +142,15 @@ const ingredientData = [
   },
   {
     name: 'Sour Cream',
+  },
+  {
+    name: 'Bell Pepper',
+  },
+  {
+    name: 'Black Olives',
+  },
+  {
+    name: 'Mustard',
   },
 ];
 
