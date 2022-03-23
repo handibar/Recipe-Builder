@@ -1,8 +1,9 @@
 <!-- Loop over each object in the projects array -->
 {{#each recipes as |recipe|}}
-  <div class='row mb-4 project'>
-
-    {{recipe.name}}
+  <div>
+    <h1>
+      {{recipe.name}}</h1>
+    <img width='300' src='{{recipe.image_url}}' alt='{{recipe.name}}' />
     {{#each recipe.ingredients as |ing|}}
       <div>{{ing.name}}</div>
     {{/each}}

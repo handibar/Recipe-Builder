@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const { Ingredient, Recipe, IngredientRecipe, User } = require('../models');
 const withAuth = require('../utils/auth');
+
 // show all ingredients on the homepage
+
 router.get('/', async (req, res) => {
   try {
     const ingredientData = await Ingredient.findAll({});
@@ -18,7 +20,9 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // display recipes after user clicks checkboxes
+
 router.get('/recipes', async (req, res) => {
   const ids = req.query.ids.split(',');
   console.log('here are the ids' + ids);
@@ -58,7 +62,6 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
     });
 
     const user = userData.get({ plain: true });

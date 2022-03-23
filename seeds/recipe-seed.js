@@ -5,13 +5,13 @@ const recipeData = [
     name: 'Shrimp Scampi',
     description:
       'Quick and tasty shrimp and pasta, finished with lemon and red pepper flakes.',
-    image_url: '',
+    image_url: '/images/shrimpscampi.jpg',
   },
   {
     name: 'Buffalo Chicken Enchiladas',
     description:
       'Stuff corn tortillas with a cheesy Buffalo filling and bake until melted for an easy weeknight meal',
-    image_url: '',
+    image_url: '/images/chili.jpg',
   },
   {
     name: 'Glazed Salmon and Spiced Carrots',
