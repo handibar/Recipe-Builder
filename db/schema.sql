@@ -6,7 +6,8 @@ create table recipes (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR (100) NOT NULL,
     description text,
-    image_url varchar (200)
+    image_url varchar (200),
+    recipe_url varchar(300)
     );
     
     create table ingredients (
@@ -25,4 +26,4 @@ create table recipes (
      FOREIGN KEY (ingredient_id)
      REFERENCES ingredients(id)
 	ON DELETE cascade )
-    
+     

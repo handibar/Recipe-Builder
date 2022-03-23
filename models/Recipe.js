@@ -21,18 +21,18 @@ Recipe.init(
     image_url: {
       type: DataTypes.STRING,
     },
+    recipe_url: {
+      type: DataTypes.STRING,
+    },
   },
- 
-    {
+
+  {
     sequelize,
     timestamps: false,
-    
+
     underscored: true,
     modelName: 'recipe',
   }
-
 );
-
-
 
 module.exports = Recipe;
