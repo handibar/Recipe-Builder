@@ -53,7 +53,7 @@ const ingredientData = [
     name: 'Pizza Dough',
   },
   {
-    name: 'Chipolte Peppers',
+    name: 'Chipotle Peppers',
   },
   {
     name: 'Scallions',
