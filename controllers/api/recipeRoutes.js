@@ -3,7 +3,7 @@ const { parse } = require('dotenv');
 const { json } = require('express/lib/response');
 const { Recipe, Ingredient, IngredientRecipe } = require('../../models');
 const { findAll } = require('../../models/Recipe');
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 
 router.get('/recipe', async (req, res) => {
   res.render();
