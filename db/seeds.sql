@@ -74,7 +74,33 @@ VALUES ("Shrimp"),
        
 
 
-INSERT INTO recipes_ingredients (recipe_id, ingredient_id)
-VALUES (),
-(),
+INSERT INTO ingredient_recipe (recipe_id, ingredient_id)
+VALUES 
+(6, 2),
+(6, 28),
+(7, 4),
+(7, 18),
+(8, 3),
+(8, 13),
+(9, 23),
+(20, 12),
+(20, 40);
+(15, 4),
+(15, 44),
+(15, 12),
+(15, 30),
+(15, 27),
+(16, 2),
+(16, 19),
+(17, 4),
+(17, 45),
+(17, 46),
+(17, 47),
+(18, 2),
+(18, 39),
+(19, 3),
+(19, 22),
+(19, 11),
+(19, 40);
+
 

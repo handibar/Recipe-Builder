@@ -155,4 +155,6 @@ const ingredientData = [
 
 const seedIngredients = () => Ingredient.bulkCreate(ingredientData);
 
+seedIngredients();
+
 module.exports = seedIngredients;

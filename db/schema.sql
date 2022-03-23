@@ -15,7 +15,7 @@ create table recipes (
     );
     
     
-    create table recipes_ingredients (
+    create table ingredient_recipe (
      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
      recipe_id int,
      FOREIGN KEY (recipe_id)
