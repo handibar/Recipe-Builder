@@ -3,6 +3,10 @@
   <div>
     <h1>
       {{recipe.name}}</h1>
+       <input
+          type='checkbox'
+          value='{{recipe.id}}'
+          name='{{recipe.name}}'
     <img width='300' src='{{recipe.image_url}}' alt='{{recipe.name}}' />
     {{#each recipe.ingredients as |ing|}}
       <div>{{ing.name}}</div>
