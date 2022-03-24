@@ -1,16 +1,16 @@
 const router = require('express').Router();
 const { parse } = require('dotenv');
-const { json } = require('express/lib/response');
+// const { json } = require('express/lib/response');
 const { Recipe, Ingredient, IngredientRecipe } = require('../../models');
-const { findAll } = require('../../models/Recipe');
+// const { findAll } = require('../../models/Recipe');
 const withAuth = require('../../utils/auth');
 
-router.get('/recipe', async (req, res) => {
+router.get('/recipe', withAuth, async (req, res) => {
   res.render();
 });
 
 // post route for selected ingredients
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   const ingredients = req.body.ingredients.map(Number);
 
   try {
@@ -28,4 +28,20 @@ router.post('/', async (req, res) => {
   }
 });
 
+// router.post('/recipes', withAuth, async (req, res) => {
+//  if (checked === true) {
+
+//    try {
+//     const favorites = await getElementById('favorite').value;
+//      db.query('Update User Set favorite = ? where id =?' )
+//      {
+//        where: {
+//          recipe_id:
+//        }
+//      }
+
+// }catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   };
 module.exports = router;
