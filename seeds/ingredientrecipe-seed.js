@@ -271,6 +271,10 @@ const ingredientRecipeData = [
     recipe_id: 15,
   },
   {
+    ingredient_id: 11,
+    recipe_id: 15,
+  },
+  {
     ingredient_id: 44,
     recipe_id: 15,
   },
