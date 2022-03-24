@@ -46,20 +46,23 @@ router.post('/favorites', async (req, res) => {
   }
 });
 
-// router.post('/recipes', withAuth, async (req, res) => {
-//  if (checked === true) {
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const favoriteData = await Favorite.destroy({
+      where: {
+        recipe_id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
-//    try {
-//     const favorites = await getElementById('favorite').value;
-//      db.query('Update User Set favorite = ? where id =?' )
-//      {
-//        where: {
-//          recipe_id:
-//        }
-//      }
+    if (!favoriteData) {
+      res.status(404).json({ message: 'No recipe found.' });
+      return;
+    }
 
-// }catch (err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   };
+    res.status(200).json(favoriteData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
