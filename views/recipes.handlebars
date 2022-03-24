@@ -5,7 +5,7 @@
     <h1>
       {{recipe.name}}</h1>
     
-    <a href="{{recipe.recipe_url}}">
+    <a target="_blank" href="{{recipe.recipe_url}}">
     <img width='300' src='{{recipe.image_url}}' alt='{{recipe.name}}' />
     </a>
     {{#each recipe.ingredients as |ing|}}

@@ -275,10 +275,6 @@ const ingredientRecipeData = [
     recipe_id: 15,
   },
   {
-    ingredient_id: 12,
-    recipe_id: 15,
-  },
-  {
     ingredient_id: 30,
     recipe_id: 15,
   },
@@ -325,10 +321,6 @@ const ingredientRecipeData = [
   },
   {
     ingredient_id: 22,
-    recipe_id: 19,
-  },
-  {
-    ingredient_id: 12,
     recipe_id: 19,
   },
   {
