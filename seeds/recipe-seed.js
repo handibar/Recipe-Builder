@@ -119,7 +119,7 @@ const recipeData = [
     name: 'Baked Ranch Chicken',
     description:
       'Baked chicken coated in ranch seasoning and bread crumbs for a flavorful, crispy dinner.',
-    image_url: 'ranchchicken.jpg',
+    image_url: '/images/ranchchicken.jpg',
     recipe_url: 'https://www.jocooks.com/recipes/baked-ranch-chicken/',
   },
   {
