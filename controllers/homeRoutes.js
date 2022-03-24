@@ -1,5 +1,11 @@
 const router = require('express').Router();
-const { Ingredient, Recipe, IngredientRecipe, User } = require('../models');
+const {
+  Ingredient,
+  Recipe,
+  IngredientRecipe,
+  User,
+  Favorite,
+} = require('../models');
 const withAuth = require('../utils/auth');
 
 // show all ingredients on the homepage
@@ -62,6 +68,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
+      include: { model: Recipe, through: Favorite },
     });
 
     const user = userData.get({ plain: true });
