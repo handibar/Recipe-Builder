@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Favorite } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -44,6 +44,35 @@ router.post('/login', async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+// user can see their saved recipes
+
+router.get('/profile', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('');
+    // need to render the faved recipe cards here, pull from handlebars
+  }
+});
+
+router.delete('/profile/:id', async (req, res) => {
+  try {
+    const favoriteData = await Favorite.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!favoriteData) {
+      res.status(404).json({ message: 'No recipe found.' });
+      return;
+    }
+
+    res.status(200).json(favoriteData);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
