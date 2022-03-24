@@ -23,13 +23,13 @@ router.get('/', async (req, res) => {
 
 // display recipes after user clicks checkboxes
 
-router.get('/recipes', async (req, res) => {
+router.get('/recipes', withAuth, async (req, res) => {
   const ids = req.query.ids.split(',');
-  console.log('here are the ids' + ids);
+  // console.log('here are the ids' + ids);
   let whereClause = {};
   if (ids.length) {
     whereClause = { id: ids };
-    console.log('HELLO AGAIN' + whereClause.id);
+    // console.log('HELLO AGAIN' + whereClause.id);
   }
   try {
     // Get all recipes
@@ -45,7 +45,7 @@ router.get('/recipes', async (req, res) => {
 
     // Serialize data so the template can read it
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    console.log('this is it' + recipes);
+    // console.log('this is it' + recipes);
     // Pass serialized data and session flag into template
     res.render('recipes', {
       recipes,
