@@ -6,6 +6,10 @@ const ingredientRecipeData = [
     recipe_id: 1,
   },
   {
+    ingredient_id: 6,
+    recipe_id: 1,
+  },
+  {
     ingredient_id: 12,
     recipe_id: 1,
   },
@@ -103,6 +107,10 @@ const ingredientRecipeData = [
   },
   {
     ingredient_id: 2,
+    recipe_id: 6,
+  },
+  {
+    ingredient_id: 6,
     recipe_id: 6,
   },
   {
@@ -256,6 +264,10 @@ const ingredientRecipeData = [
   },
   {
     ingredient_id: 4,
+    recipe_id: 15,
+  },
+  {
+    ingredient_id: 6,
     recipe_id: 15,
   },
   {

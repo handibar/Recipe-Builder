@@ -22,8 +22,8 @@ const ingredientData = [
     type_id: 1,
   },
   {
-    name: 'Salmon',
-    type_id: 1,
+    name: 'Butter',
+    type_id: 4,
   },
   {
     name: 'Pepperoni',
