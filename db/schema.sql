@@ -27,4 +27,15 @@ create table recipes (
      FOREIGN KEY (ingredient_id)
      REFERENCES ingredients(id)
 	ON DELETE cascade )
+
+        create table favorite_recipe (
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     recipe_id int,
+     FOREIGN KEY (recipe_id)
+     REFERENCES recipes(id)
+     ON DELETE CASCADE,
+     user_id int,
+     FOREIGN KEY (user_id)
+     REFERENCES user(id)
+	ON DELETE cascade )
      

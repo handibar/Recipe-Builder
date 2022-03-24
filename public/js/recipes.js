@@ -6,8 +6,25 @@ const newFavoriteHandler = async (event) => {
 
   // get recipeid from button when clicked
 
-  const fav = event.target.value;
-  console.log(fav);
+  const recipe_id = event.target.value;
+  console.log(recipe_id);
+  if (recipe_id) {
+    const response = await fetch(`/api/recipes/favorites`, {
+      method: 'POST',
+      body: JSON.stringify({ recipe_id }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      console.log('favorite added');
+    } else {
+      alert(
+        'Failed to create favorite - you cannot favorite the same recipe twice!'
+      );
+    }
+  }
 };
 
 document

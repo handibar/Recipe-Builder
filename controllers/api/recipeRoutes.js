@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const { parse } = require('dotenv');
 // const { json } = require('express/lib/response');
-const { Recipe, Ingredient, IngredientRecipe } = require('../../models');
+const {
+  Recipe,
+  Ingredient,
+  IngredientRecipe,
+  Favorite,
+} = require('../../models');
 // const { findAll } = require('../../models/Recipe');
 const withAuth = require('../../utils/auth');
 
@@ -27,14 +32,15 @@ router.post('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-router.post('/favorites', withAuth, async (req, res) => {
+// post route for favorite recipes
+router.post('/favorites', async (req, res) => {
   try {
-    const userFavorite = await User.update({
+    const newFavorite = await Favorite.create({
       ...req.body,
+      user_id: req.session.user_id,
     });
 
-    res.status(200).json(userFavorite);
+    res.status(200).json(newFavorite);
   } catch (err) {
     res.status(400).json(err);
   }
