@@ -43,7 +43,8 @@
   </div>
   {{! put other handlebars here just in case }}
   <div class='form-group'>
-    <button type='submit' class='btn btn-color btn-recipme '>Recipe Me!</button>
+    <button type='submit' class='btn btn-color btn-recipme js-create' data-loggedin='{{logged_in}}'>Recipe Me!</button>
   </div>
 </form>
+<div id='snackbar'>You must be logged in to continue.</div>
 <script src='./js/homepage.js'></script>

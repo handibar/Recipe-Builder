@@ -26,6 +26,7 @@ router.post('/', withAuth, async (req, res) => {
     if (!ingredientData) {
       res.status(404).json({ message: 'no recipes' });
     }
+
     res.status(200).json(ingredientData);
   } catch (err) {
     console.log(err);

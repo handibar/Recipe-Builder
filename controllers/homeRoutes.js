@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     // console.log(ingredient);
     res.render('homepage', {
       ingredient,
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in || false,
     });
   } catch (err) {
     res.status(500).json(err);
