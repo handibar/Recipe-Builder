@@ -1,26 +1,49 @@
 <form class='form new-project-form'>
-  {{#each ingredient as |ingredient|}}
-<div class='row mb-4 project'>
-<div class='card w-80 card-color'></div>
-<div class="card-body">
-  <p class="card-text">{{ingredient.name}}</p>
+
+  <div>
+     <div class="card w-80 card-color align">
+      <div class="card-body">
+    <div class='card-title card-text-color card-text-design '>Protein</div>
+    {{#when_type ingredient '1'}}
       <div>
-        <label class="btn btn-color">
-        <input
-          type='checkbox'
-          value='{{ingredient.id}}'
-          name='{{ingredient.name}}'
-        />
-        {{ingredient.name}}</div>
-        </label>
-      {{#each ingredient.recipes as |recipe|}}
-        {{recipe.name}}
-      {{/each}}
-    </div>
-    </div>
-  {{/each}}
+        <input type='checkbox' value='{{id}}' name='{{name}}' />
+        {{from}}
+        {{name}}</div>
+       
+    {{/when_type}}
+    <div class='card-title card-text-color card-text-design'>Grain</div>
+    {{#when_type ingredient '2'}}
+      <div>
+        <input type='checkbox' value='{{id}}' name='{{name}}' />
+        {{from}}
+        {{name}}</div>
+    {{/when_type}}
+    <div class='card-title card-text-color card-text-design'>Vegetables</div>
+    {{#when_type ingredient '3'}}
+      <div>
+        <input type='checkbox' value='{{id}}' name='{{name}}' />
+        {{from}}
+        {{name}}</div>
+    {{/when_type}}
+    <div class='card-title card-text-color card-text-design'>Dairy</div>
+    {{#when_type ingredient '4'}}
+      <div>
+        <input type='checkbox' value='{{id}}' name='{{name}}' />
+        {{from}}
+        {{name}}</div>
+    {{/when_type}}
+    <div class='card-title card-text-color card-text-design'>Extras</div>
+    {{#when_type ingredient '5'}}
+      <div>
+        <input type='checkbox' value='{{id}}' name='{{name}}' />
+        {{from}}
+        {{name}}</div>
+    {{/when_type}}
+
+  </div>
+  {{! put other handlebars here just in case }}
   <div class='form-group'>
-    <button type='submit' class='btn btn-recipeme'>Recipe Me!</button>
+    <button type='submit' class='btn btn-color btn-recipme '>Recipe Me!</button>
   </div>
 </form>
 <script src='./js/homepage.js'></script>

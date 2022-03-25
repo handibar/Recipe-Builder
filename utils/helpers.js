@@ -19,4 +19,12 @@ module.exports = {
       return `<span for="img" aria-label="gear">⚙️</span>`;
     }
   },
+  when_type: (list, value, options) => {
+    var i,
+      result = '';
+    for (i = 0; i < list.length; ++i)
+      if (list[i].type_id == value) result = result + options.fn(list[i]);
+
+    return result;
+  },
 };
