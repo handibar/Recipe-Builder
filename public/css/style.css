@@ -1,4 +1,5 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -17,8 +18,37 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+body {
+  background-color: rgb(250, 228, 232);
+  color: rgb(124, 42, 42);
+}
+
+.btn-color {
+  background-color: rgb(238, 158, 158);
+  color: white;
+}
+
+header h1 {
+  color: rgb(228, 79, 79);
+  display: inline-block;
+  font-size: 48px;
+}
+
+header h1 .me-header {
+  color: rgb(124, 42, 42);
+}
+
+.center {
+  margin-left: 400px;
+  padding-top: 100px;
+}
+
+a {
+  color: rgb(228, 79, 79);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(228, 79, 79);
+  text-decoration: none;
 }
