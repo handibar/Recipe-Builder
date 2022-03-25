@@ -1,42 +1,51 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<body>
+  <header>
+    <img
+      class='resize'
+      src='./images/chef-s-uniform-icon-chef-f67523f4be024138c8b31b6b4b2eb099 (1).png'
+      alt='A cute chef hat.'
+    />
+  </header>
+  <div class='row center'>
+    <div class='col-md-6'>
+      <h2>Login</h2>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
+      <form class='form login-form'>
+        <div class='form-group'>
+          <label for='email-login'>Email:</label>
+          <input class='form-input' type='text' id='email-login' />
+        </div>
+        <div class='form-group'>
+          <label for='password-login'>Password:</label>
+          <input class='form-input' type='password' id='password-login' />
+        </div>
+        <div class='form-group'>
+          <button class='btn btn-color' type='submit'>Login</button>
+        </div>
+      </form>
+    </div>
+    <div class='col-md-6'>
+      <h2>Sign Up</h2>
+
+      <form class='form signup-form'>
+        <div class='form-group'>
+          <label for='name-signup'>Name:</label>
+          <input class='form-input' type='text' id='name-signup' />
+        </div>
+        <div class='form-group'>
+          <label for='email-signup'>Email:</label>
+          <input class='form-input' type='text' id='email-signup' />
+        </div>
+        <div class='form-group'>
+          <label for='password-signup'>Password:</label>
+          <input class='form-input' type='password' id='password-signup' />
+        </div>
+        <div class='form-group'>
+          <button class='btn btn-color' type='submit'>Sign up</button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
+</body>
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script src="./js/login.js"></script>
+<script src='./js/login.js'></script>
