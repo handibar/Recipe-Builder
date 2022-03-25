@@ -52,3 +52,115 @@ a:hover {
   color: rgb(228, 79, 79);
   text-decoration: none;
 }
+
+body {
+  background-color: rgb(250, 228, 232);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
+
+/* .grid-child {
+  border: solid black;
+} */
+
+header h1 {
+  color: rgb(228, 79, 79);
+  display: inline-block;
+  font-size: 48px;
+}
+
+header h1 .me-header {
+  color: rgb(124, 42, 42);
+}
+
+.big-header {
+  padding: 70px;
+  margin-right: 500px;
+}
+
+.card-text-color {
+  color: rgb(228, 79, 79);
+}
+
+.card-color {
+  background-color: rgb(255, 242, 242);
+}
+
+.btn-color {
+  background-color: rgb(238, 158, 158);
+  color: white;
+  border-color: white;
+  border-radius: 25px 25px 25px 25px 25px;
+  width: 500px;
+}
+
+.btn-recipeme {
+  background-color: rgb(228, 79, 79);
+  color: white;
+  border-color: white;
+  border-radius: 25px 25px 25px 25px 25px;
+  width: 200px;
+}
+
+.resize {
+  width: 300px;
+  height: 300px;
+}
+
+.lead-resize {
+  padding-top: 50px;
+}
+
+section h1 {
+  color: rgb(228, 79, 79);
+  display: inline-block;
+  font-size: 48px;
+}
+
+section h1 .me-header {
+  color: rgb(124, 42, 42);
+}
+
+.text-bold {
+  font-size: 30px;
+}
+
+a {
+  color: rgb(228, 79, 79);
+  text-decoration: none;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-size: 20px;
+}
+
+header {
+  padding: 20px;
+  background-color: rgb(250, 228, 232);
+  color: #2f2f2f;
+}
+
+.checkbox-hidden {
+  position: absolute;
+  left: -10000vw;
+}
+
+.block {
+  display: block;
+}
