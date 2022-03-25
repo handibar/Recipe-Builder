@@ -1,21 +1,28 @@
 <form class='form new-project-form'>
-  {{#each ingredient as |ingredient|}}
-    <div class='row mb-4 project'>
 
+  {{#each ingredient as |ingredient|}}
+  
+<div class='row mb-4 project'>
+<div class='card w-80 card-color'></div>
+<div class="card-body">
+  <p class="card-text">{{ingredient.name}}</p>
       <div>
+        <label class="btn btn-color">
         <input
           type='checkbox'
           value='{{ingredient.id}}'
           name='{{ingredient.name}}'
         />
         {{ingredient.name}}</div>
+        </label>
       {{#each ingredient.recipes as |recipe|}}
         {{recipe.name}}
       {{/each}}
     </div>
+    </div>
   {{/each}}
   <div class='form-group'>
-    <button type='submit' class='btn btn-primary'>Create</button>
+    <button type='submit' class='btn btn-recipeme'>Recipe Me!</button>
   </div>
 </form>
 <script src='./js/homepage.js'></script>
