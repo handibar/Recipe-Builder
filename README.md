@@ -14,6 +14,16 @@ AS AN individual without any idea what to make at home for myself,
 I WANT TO see a list of recipes that contains the ingredients I already have at home,
 SO THAT I can cook a meal accordingly.
 
+When the user arrives on the homepage, they will see a list of ingredients. Upon log in, users can check the ingredients they have available in their kitchen and find recipes in our database that match those ingredients.
+
+When they click “Create” those recipes will display. From there, a user can click on the image to see the recipe or they can “Favorite” the recipe. When a user “Favorites” a recipe, it is displayed on their profile page for future reference. 
+
+If the user decides to delete a recipe from their profile, it will no longer be displayed.
+
+## Screenshot
+
+![This is a screenshot of our RecipeMe logo. It's a cartoon chef with a mustache and chef hat.](public/recipemeicon.png)
+
 
 ## Installation
 

@@ -4,9 +4,10 @@
   <div>
     <h1>
       {{recipe.name}}</h1>
+      <a target="_blank" href="{{recipe.recipe_url}}"></a>
+    <a href="#" data-toggle="tooltip" title="Click here to view the full recipe!"><img width='300' src='{{recipe.image_url}}' alt='{{recipe.name}}' /> </a>
     
-    <a target="_blank" href="{{recipe.recipe_url}}">
-    <img width='300' src='{{recipe.image_url}}' alt='{{recipe.name}}' />
+    
     </a>
     {{#each recipe.ingredients as |ing|}}
       <div>{{ing.name}}</div>
