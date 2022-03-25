@@ -22,7 +22,7 @@ If the user decides to delete a recipe from their profile, it will no longer be 
 
 ## Screenshot
 
-![This is a screenshot of our RecipeMe logo. It's a cartoon chef with a mustache and chef hat.](public/recipemeicon.png)
+![This is a screenshot of our RecipeMe logo. It's a cartoon chef with a mustache and chef hat.](/images/recipemeicon.png)
 
 
 ## Installation
@@ -37,11 +37,11 @@ This application is covered under an MIT License.
 
 Jason Burke
 GitHub: https://github.com/Jasonsburke90
-Email:
+Email: jasonsburke90@gmail.com
 
 Mousa Haddadin
-GitHub: https://github.com/
-Email:
+GitHub: https://github.com/mhaddadin1
+Email: mousahaddadin@gmail.com
 
 Heather Stevens
 
@@ -49,14 +49,14 @@ GitHub: https://github.com/heatherveva
 Email: heatherveva@gmail.com
 
 Maya Tillman
-GitHub: https://github.com/
-Email:
+GitHub: https://github.com/mayaatil
+Email: mayatillman17@gmail.com
 
 
 ## Links
 
 GitHub Repository: https://github.com/handibar/project2.git
 
-GitHub Page: 
+GitHub Page: https://handibar.github.io/project2/
 
 Heroku: 
