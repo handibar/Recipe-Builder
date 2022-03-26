@@ -92,6 +92,10 @@ header h1 .me-header {
   padding-top: 50px;
 }
 
+.food {
+  color: rgb(228, 79, 79);
+}
+
 section h1 {
   color: rgb(228, 79, 79);
   display: inline-block;
@@ -168,8 +172,24 @@ header {
   color: yellow;
 } */
 
+.line {
+  text-align: center;
+}
+
+.center-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
 footer {
   text-align: center;
+}
+
+input[type='checkbox'] {
+  /* change "blue" browser chrome to yellow */
+  filter: hue-rotate(130deg) brightness(1);
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
