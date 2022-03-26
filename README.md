@@ -37,11 +37,11 @@ This application is covered under an MIT License.
 
 Jason Burke
 GitHub: https://github.com/Jasonsburke90
-Email:
+Email: jasonsburke90@gmail.com
 
 Mousa Haddadin
-GitHub: https://github.com/
-Email:
+GitHub: https://github.com/mhaddadin1
+Email: mousahaddadin@gmail.com
 
 Heather Stevens
 
@@ -49,14 +49,14 @@ GitHub: https://github.com/heatherveva
 Email: heatherveva@gmail.com
 
 Maya Tillman
-GitHub: https://github.com/
-Email:
+GitHub: https://github.com/mayaatil
+Email: mayatillman17@gmail.com
 
 
 ## Links
 
 GitHub Repository: https://github.com/handibar/project2.git
 
-GitHub Page: 
+GitHub Page: https://handibar.github.io/project2/
 
-Heroku: 
+Heroku: https://dashboard.heroku.com/apps/project-2-jhmm
