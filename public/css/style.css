@@ -104,8 +104,13 @@ section h1 .me-header {
 }
 
 .resize {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
+}
+
+.image-align {
+  float: left;
+  margin-right: 200px;
 }
 
 section h1 {
@@ -130,6 +135,15 @@ header {
 
 .card-text-design {
   font-size: 50px;
+}
+
+.nav-padding {
+  padding: 60px;
+}
+
+.big-header-favorites {
+  float: left;
+  size-adjust: 100px;
 }
 
 footer {
