@@ -16,23 +16,30 @@
   </section>
 
   <div class='favorite-list'>
+    <div class='card recipe-card-display' style='width: 18rem;'></div>
     {{#each recipes as |recipe|}}
-      <div class='container'>
-        <div class='row'>
-          <div class='col col-padding'>{{recipe.name}}</div>
-          <div class='col-md-4'>
-            <button
-              class='btn btn-sm btn-danger'
-              data-id='{{recipe.id}}'
-            >DELETE</button>
-          </div>
-        </div>
 
+      <a target='_blank' href='{{recipe.recipe_url}}'></a>
+      <a
+        href='#'
+        data-toggle='tooltip'
+        title='Click here to view the full recipe!'
+      ><img
+          class='card-img-top'
+          src='{{recipe.image_url}}'
+          alt='Card image cap'
+        />
+      </a>
+      <div class='card-body'>
+        <h5 class='display-4 card-text-color'>{{recipe.name}}</h5>
+        <button
+          class='btn btn-sm btn-danger'
+          data-id='{{recipe.id}}'
+        >DELETE</button>
       </div>
     {{/each}}
   </div>
 
-  <footer>Est. 2022</footer>
   <script src='./js/profile.js'></script>
 
 </body>

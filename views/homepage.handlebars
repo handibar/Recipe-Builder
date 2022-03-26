@@ -1,49 +1,105 @@
 <form class='form new-project-form'>
 
-  <div>
-     <div class="card w-80 card-color align">
-      <div class="card-body">
-    <div class='card-title card-text-color card-text-design '>Protein</div>
-    {{#when_type ingredient '1'}}
-      <div>
-        <input type='checkbox' value='{{id}}' name='{{name}}' />
-        {{from}}
-        {{name}}</div>
-       
-    {{/when_type}}
-    <div class='card-title card-text-color card-text-design'>Grain</div>
-    {{#when_type ingredient '2'}}
-      <div>
-        <input type='checkbox' value='{{id}}' name='{{name}}' />
-        {{from}}
-        {{name}}</div>
-    {{/when_type}}
-    <div class='card-title card-text-color card-text-design'>Vegetables</div>
-    {{#when_type ingredient '3'}}
-      <div>
-        <input type='checkbox' value='{{id}}' name='{{name}}' />
-        {{from}}
-        {{name}}</div>
-    {{/when_type}}
-    <div class='card-title card-text-color card-text-design'>Dairy</div>
-    {{#when_type ingredient '4'}}
-      <div>
-        <input type='checkbox' value='{{id}}' name='{{name}}' />
-        {{from}}
-        {{name}}</div>
-    {{/when_type}}
-    <div class='card-title card-text-color card-text-design'>Extras</div>
-    {{#when_type ingredient '5'}}
-      <div>
-        <input type='checkbox' value='{{id}}' name='{{name}}' />
-        {{from}}
-        {{name}}</div>
-    {{/when_type}}
+  <div class='row w-100'>
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <h5 class='display-4'>Protein</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>Select your protein.</h6>
+        {{#when_type ingredient '1'}}
+          <p class='display-4 ingredients-text'><input
+              type='checkbox'
+              value='{{id}}'
+              name='{{name}}'
+            />
+            {{from}}
+            {{name}}.</p>
+        {{/when_type}}
+      </div>
+    </div>
+
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <h5 class='display-4'>Grain</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>Select your grain.</h6>
+        {{#when_type ingredient '2'}}
+          <p class='display-4 ingredients-text'><input
+              type='checkbox'
+              value='{{id}}'
+              name='{{name}}'
+            />
+            {{from}}
+            {{name}}.</p>
+        {{/when_type}}
+      </div>
+    </div>
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <img
+          class='resize'
+          src='./images/chef-s-uniform-icon-chef-f67523f4be024138c8b31b6b4b2eb099 (1).png'
+          alt='A cute chef hat.'
+        />
+      </div>
+    </div>
 
   </div>
+  <div class='row w-100'>
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <h5 class='display-4'>Vegetables</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>Select your veggies.</h6>
+        {{#when_type ingredient '3'}}
+          <p class='display-4 ingredients-text'><input
+              type='checkbox'
+              value='{{id}}'
+              name='{{name}}'
+            />
+            {{from}}
+            {{name}}.</p>
+        {{/when_type}}
+      </div>
+    </div>
+
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <h5 class='display-4'>Dairy</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>Select your dairy.</h6>
+        {{#when_type ingredient '4'}}
+          <p class='display-4 ingredients-text'><input
+              type='checkbox'
+              value='{{id}}'
+              name='{{name}}'
+            />
+            {{from}}
+            {{name}}.</p>
+        {{/when_type}}
+      </div>
+    </div>
+
+    <div class='card recipe-card-display' style='width: 18rem;'>
+      <div class='card-body'>
+        <h5 class='display-4'>Extras</h5>
+        <h6 class='card-subtitle mb-2 text-muted'>Select your tasty extras.</h6>
+        {{#when_type ingredient '5'}}
+          <p class='display-4 ingredients-text'><input
+              type='checkbox'
+              value='{{id}}'
+              name='{{name}}'
+            />
+            {{from}}
+            {{name}}.</p>
+        {{/when_type}}
+      </div>
+    </div>
+  </div>
+
   {{! put other handlebars here just in case }}
   <div class='form-group'>
-    <button type='submit' class='btn btn-color btn-recipme js-create' data-loggedin='{{logged_in}}'>Recipe Me!</button>
+    <button
+      type='submit'
+      class='btn btn-color btn-recipme js-create'
+      data-loggedin='{{logged_in}}'
+    >Recipe Me!</button>
   </div>
 </form>
 <div id='snackbar'>You must be logged in to continue.</div>
