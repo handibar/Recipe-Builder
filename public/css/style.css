@@ -72,6 +72,14 @@ header h1 .me-header {
   background-color: rgb(255, 242, 242);
 }
 
+.ingredients-text {
+  font-size: 15px;
+}
+
+.ingredients-text-2 {
+  font-size: 20px;
+}
+
 .btn-color {
   background-color: rgb(238, 158, 158);
   color: white;
@@ -145,6 +153,20 @@ header {
   float: left;
   size-adjust: 100px;
 }
+
+.recipe-card-display {
+  background-color: rgb(255, 242, 242);
+  border-color: white;
+  border-width: 1.5px;
+}
+
+.subtitle-design {
+  color: rgb(228, 79, 79);
+}
+
+/* input[type='checkbox']:checked {
+  color: yellow;
+} */
 
 footer {
   text-align: center;
