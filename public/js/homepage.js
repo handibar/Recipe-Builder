@@ -28,8 +28,6 @@ const newFormHandler = async (event) => {
       const data = await response.json();
       const recipeIDs = data.map((recipe) => recipe.recipe_id);
 
-      console.log(data);
-      console.log(recipeIDs);
       // calls the homeroute for recipes
       window.location.replace(`recipes?ids=${recipeIDs}`);
       // submit hidden form with the id's that have been selected
