@@ -3,20 +3,19 @@
 <form class='form new-recipe-form p-2'>
   <div class="card-group">
 {{#each recipes as |recipe|}}
-  <div class="recipe-card-display" style="width: 18rem;">
-    <a target="_blank" href="{{recipe.recipe_url}}" href="#" data-toggle="tooltip" title="Click here to view the full recipe!"><img class="card-img-top" src="{{recipe.image_url}}" alt="Card image cap"> </a>
-
+  <div class="recipe-card-display" style="width: 20.2rem;">
+     <a target="_blank" href="{{recipe.recipe_url}}"></a>
+    <a href="#" data-toggle="tooltip" title="Click here to view the full recipe!"><img class="card-img-top" src="{{recipe.image_url}}" alt="Card image cap"> </a>
+  <div class='form-group card-text'>
+    <button id="fav" value='{{recipe.id}}'  class='btn btn-color favbtn'>Add to My Favorites</button>
+  </div>
   <div class="card-body">
     <h5 class="display-4 card-text-color ">{{recipe.name}}</h5>
-    <h6 class='display-4 ingredients-text'>Ingredients inside this recipe:</h6>
     {{#each recipe.ingredients as |ing|}}
-    <p class="display-4 ingredients-text">{{ing.name}}.</p>
     {{/each}}
   </div>
 
-  <div class='form-group'>
-    <button id="fav" value='{{recipe.id}}'  class='btn btn-color favbtn'>Add to My Favorites</button>
-  </div>
+  
   </div>
   </form>
 

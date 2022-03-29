@@ -23,20 +23,10 @@ body {
   color: rgb(124, 42, 42);
 }
 
-.btn-color {
-  background-color: rgb(238, 158, 158);
-  color: white;
-}
-
 header h1 {
   color: rgb(228, 79, 79);
   display: inline-block;
   font-size: 48px;
-}
-
-.center {
-  margin-left: 400px;
-  padding-top: 100px;
 }
 
 a {
@@ -65,34 +55,22 @@ header h1 .me-header {
 }
 
 .card-text-color {
-  color: rgb(228, 79, 79);
+  color: rgb(255, 242, 242);
 }
 
 .card-color {
   background-color: rgb(255, 242, 242);
 }
 
-.ingredients-text {
-  font-size: 15px;
-}
-
-.ingredients-text-2 {
-  font-size: 20px;
-}
-
 .btn-color {
-  background-color: rgb(238, 158, 158);
+  background-color: rgb(124, 42, 42);
   color: white;
   border-color: white;
-  border-radius: 25px 25px 25px 25px 25px;
-  width: 200px;
+  text-align: center;
+  margin: 10px;
 }
 
-.lead-resize {
-  padding-top: 50px;
-}
-
-.food {
+.welcome {
   color: rgb(228, 79, 79);
 }
 
@@ -106,15 +84,6 @@ section h1 .me-header {
   color: rgb(124, 42, 42);
 }
 
-.text-bold {
-  font-size: 30px;
-}
-
-.big-header {
-  padding: 70px;
-  margin-right: 500px;
-}
-
 .resize {
   width: 400px;
   height: 400px;
@@ -122,7 +91,6 @@ section h1 .me-header {
 
 .image-align {
   float: left;
-  margin-right: 200px;
 }
 
 section h1 {
@@ -131,12 +99,30 @@ section h1 {
   font-size: 48px;
 }
 
-.text-bold {
-  font-size: 30px;
-}
-
 a:after {
   color: rgb(228, 79, 79);
+}
+
+.move {
+  animation-name: imagemove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes imagemove {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 header {
@@ -153,43 +139,78 @@ header {
   padding: 60px;
 }
 
-.big-header-favorites {
-  float: left;
-  size-adjust: 100px;
+.favdesign {
+  display: inline-block;
 }
 
 .recipe-card-display {
-  background-color: rgb(255, 242, 242);
-  border-color: white;
-  border-width: 1.5px;
+  background-color: rgb(124, 42, 42);
+  border-color: rgb(255, 242, 242);
+  border-width: 3px;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 30px;
 }
 
+.header-design {
+  background-color: rgb(255, 242, 242);
+}
 .subtitle-design {
   color: rgb(228, 79, 79);
 }
 
-/* input[type='checkbox']:checked {
-  color: yellow;
-} */
-
-.line {
-  text-align: center;
+.resize-main {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
 }
 
-.center-me {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
+.transparent {
+  background-color: transparent;
+}
+
+.card-style {
+  background-color: rgb(255, 242, 242);
+  border-color: rgb(255, 242, 242);
+  border-width: 3px;
+  padding: 20px;
+  margin: 30px;
+}
+
+.card-border {
+  border-top: dotted rgb(124, 42, 42) 0.1px;
+}
+
+.header-text {
+  font-family: 'Fredoka One', cursive;
+}
+
+.btn-outline {
+  border-color: rgb(124, 42, 42);
+  color: black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn-outline:hover {
+  background: rgb(124, 42, 42);
+  color: white;
+}
+
+.card-center {
+  text-align: center;
 }
 
 footer {
   text-align: center;
+  background-color: rgb(255, 242, 242);
 }
 
-input[type='checkbox'] {
-  /* change "blue" browser chrome to yellow */
-  filter: hue-rotate(130deg) brightness(1);
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+  border-radius: 10px;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */

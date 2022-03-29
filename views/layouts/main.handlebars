@@ -4,6 +4,12 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Recipe Me</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'
+      rel='stylesheet'
+    />
     <link
       rel='shortcut icon'
       type='image/jpg'
@@ -22,16 +28,22 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
 
-  <body>
-    <div class='flex-column justify-space-around nav-padding'>
-      <header class='display-flex justify-space-between align-center p-2'>
+  <body class='header-text'>
+    <div class='flex-column justify-space-around nav-padding header-design'>
+      <header
+        class='display-flex justify-space-between align-center p-2 header-design'
+      >
         <h1 class='display-4'>
-
-          <a href='/'>Recipe<span class='me-header'>Me</span></a>
+          <img
+            class='resize-main'
+            src='./images/chef-s-uniform-icon-chef-f67523f4be024138c8b31b6b4b2eb099 (1).png'
+            alt='A cute chef hat.'
+          />
+          <a href='/'>Recipe<span class='me-header display-4'>Me</span></a>
+          <span><div class='lead me-header'>A place for amateur home cooks who
+              have no idea what to make and plenty ingredients to spare.
+            </div></span>
         </h1>
-        <p class='lead lead-resize'>A place for amateur home cooks who have no
-          idea what to make and plenty ingredients to spare.
-        </p>
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}

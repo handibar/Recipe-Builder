@@ -1,27 +1,20 @@
 <body>
   <section>
-    <div class='big-header-favroites'>
-      <div class='container'>
-        <h1 class='display-4'><img
-            class='resize'
-            src='./images/chef-s-uniform-icon-chef-f67523f4be024138c8b31b6b4b2eb099 (1).png'
-            alt='A cute chef hat.'
-          />Favo<span class='me-header'>rites</span></h1>
-        <p class='lead lead-resize text-bold'>Welcome,
-          {{name}}!
-          <div class='text-bold'>Here are your favorite recipes:</div>
+      
+        <p class='lead text-bold display-4'>Welcome,
+          <span class="welcome">{{name}}!</span>
+          <div class='text-bold display-4' >Here are your favorite recipes:</div>
         </p>
-      </div>
-    </div>
+    
   </section>
 
   
-    <div class='favorite-list'>
+    <div class='favorite-list p-2 card-group'>
       {{#each recipes as |recipe|}}
-        <div class='row w-100 center'>
-          <div class='card recipe-card-display' style='width: 18rem;'>
-            <a ></a>
-            <a target='_blank' href='{{recipe.recipe_url}}'
+        <div class='row'>
+          <div class='card recipe-card-display' style='width: 20rem;'>
+            <a target='_blank' href='{{recipe.recipe_url}}'></a>
+            <a
               href='#'
               data-toggle='tooltip'
               title='Click here to view the full recipe!'
