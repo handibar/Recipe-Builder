@@ -1,4 +1,11 @@
 //create function if favorite button is clicked
+const btn = document.getElementById('fav');
+
+btn.addEventListener('click', function onClick() {
+  btn.style.backgroundColor = 'white';
+  btn.style.color = 'black';
+  btn.innerHTML = 'Added!';
+});
 
 const newFavoriteHandler = async (event) => {
   event.preventDefault();

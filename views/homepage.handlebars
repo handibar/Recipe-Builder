@@ -1,103 +1,155 @@
-<form class='form new-project-form'>
+<form class='form new-project-form row align-items-start'>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <img
+        class='card-img-top'
+        src='./images/proteins (1).png'
+        alt='Card image cap'
+      />
 
-  <div class='row w-100'>
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <h5 class='display-4'>Protein</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>Select your protein.</h6>
+      <div class='card-body card-border'>
+        <h5 class='card-title'>Select your protein.</h5>
         {{#when_type ingredient '1'}}
-          <p class='display-4 ingredients-text'><input
-              type='checkbox'
-              value='{{id}}'
-              name='{{name}}'
-            />
-            {{from}}
-            {{name}}.</p>
+          <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+            <label class='btn btn-outline btn-check transparent'>
+              <input
+                type='checkbox'
+                name='{{name}}'
+                value='{{id}}'
+                autocomplete='off'
+              />
+              {{from}}
+              {{name}}
+            </label>
+          </div>
         {{/when_type}}
       </div>
     </div>
-
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <h5 class='display-4'>Grain</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>Select your grain.</h6>
+  </div>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <img class='card-img-top' src='./images/grain.png' alt='Card image cap' />
+      <div class='card-body card-border'>
+        <h5 class='card-title'>Select your grain.</h5>
         {{#when_type ingredient '2'}}
-          <p class='display-4 ingredients-text'><input
-              type='checkbox'
-              value='{{id}}'
-              name='{{name}}'
-            />
-            {{from}}
-            {{name}}.</p>
+          <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+            <label class='btn btn-outline transparent'>
+
+              <input
+                type='checkbox'
+                name='{{name}}'
+                value='{{id}}'
+                autocomplete='off'
+              />
+              {{from}}
+              {{name}}
+            </label>
+          </div>
         {{/when_type}}
       </div>
     </div>
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <p class='display-4'>"The way to any person's heart is through</p><span
-        <p class='display-4 food'>FOOD."</span>
-      </div>
-    </div>
-
   </div>
-  <div class='row w-100'>
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <h5 class='display-4'>Vegetables</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>Select your veggies.</h6>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <img
+        class='card-img-top'
+        src='./images/vegetables.png'
+        alt='Card image cap'
+      />
+      <div class='card-body card-border'>
+        <h5 class='card-title'>Select your veggies.</h5>
         {{#when_type ingredient '3'}}
-          <p class='display-4 ingredients-text'><input
-              type='checkbox'
-              value='{{id}}'
-              name='{{name}}'
-            />
-            {{from}}
-            {{name}}.</p>
+          <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+            <label class='btn btn-outline transparent'>
+
+              <input
+                type='checkbox'
+                name='{{name}}'
+                value='{{id}}'
+                autocomplete='off'
+              />
+              {{from}}
+              {{name}}
+            </label>
+          </div>
         {{/when_type}}
       </div>
     </div>
-
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <h5 class='display-4'>Dairy</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>Select your dairy.</h6>
+  </div>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <img
+        class='card-img-top'
+        src='./images/dairy-products.png'
+        alt='Card image cap'
+      />
+      <div class='card-body card-border'>
+        <h5 class='card-title'>Select your dairy.</h5>
         {{#when_type ingredient '4'}}
-          <p class='display-4 ingredients-text'><input
-              type='checkbox'
-              value='{{id}}'
-              name='{{name}}'
-            />
-            {{from}}
-            {{name}}.</p>
+          <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+            <label class='btn btn-outline transparent'>
+
+              <input
+                type='checkbox'
+                name='{{name}}'
+                value='{{id}}'
+                autocomplete='off'
+              />
+              {{from}}
+              {{name}}
+            </label>
+          </div>
         {{/when_type}}
       </div>
     </div>
-
-    <div class='card recipe-card-display' style='width: 18rem;'>
-      <div class='card-body'>
-        <h5 class='display-4'>Extras</h5>
-        <h6 class='card-subtitle mb-2 text-muted'>Select your tasty extras.</h6>
+  </div>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <img
+        class='card-img-top'
+        src='./images/sauces.png'
+        alt='Card image cap'
+      />
+      <div class='card-body card-border'>
+        <h5 class='card-title'>Select your tasty extras.</h5>
         {{#when_type ingredient '5'}}
-          <p class='display-4 ingredients-text'><input
-              type='checkbox'
-              value='{{id}}'
-              name='{{name}}'
-            />
-            {{from}}
-            {{name}}.</p>
+          <div class='btn-group btn-group-toggle' data-toggle='buttons'>
+            <label class='btn btn-outline transparent'>
+
+              <input
+                type='checkbox'
+                name='{{name}}'
+                value='{{id}}'
+                autocomplete='off'
+              />
+              {{from}}
+              {{name}}
+            </label>
+          </div>
         {{/when_type}}
       </div>
     </div>
   </div>
 
-  {{! put other handlebars here just in case }}
-  <div class='form-group'>
-    <button
-      type='submit'
-      class='btn btn-color btn-recipme js-create'
-      data-loggedin='{{logged_in}}'
-    >Recipe Me!</button>
+  <div class='container col'>
+    <div class='card card-style' style='width: 20rem; height: 50rem;'>
+      <button
+        type='submit'
+        class='btn transparent js-create'
+        data-loggedin='{{logged_in}}'
+      ><img
+          class='move'
+          src='./images/recipe-book.png'
+          alt='Recipe book.'
+        />Recipe Me!</button>
+      <div class='card-body'>
+        <div class='form-group'>
+
+        </div>
+      </div>
+    </div>
   </div>
+
 </form>
 <div id='snackbar'>You must be logged in to continue.</div>
 <script src='./js/homepage.js'></script>
