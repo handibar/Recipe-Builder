@@ -59,4 +59,4 @@ GitHub Repository: https://github.com/handibar/project2.git
 
 GitHub Page: https://handibar.github.io/project2/
 
-Heroku: https://dashboard.heroku.com/apps/project-2-jhmm
+Heroku: https://project-2-jhmm.herokuapp.com/
